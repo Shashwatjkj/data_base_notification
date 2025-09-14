@@ -11,3 +11,13 @@ Whenever rows in the `orders` table are inserted/updated/deleted, events stream 
 
 ## 📂 Project Structure
 
+├── sql/
+│ └── schema.sql # Orders table + trigger + function
+├── backend/
+│ ├── package.json
+│ ├── server.js
+│ └── .env.example # Copy → .env and set DATABASE_URL
+└── client/
+├── client.html # Browser client (open in browser)
+└── cli-client.js # CLI client (Node.js)
+
