@@ -26,16 +26,19 @@ realtime-orders/
 ```
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Backend Setup
+```
 cd sever
 npm install
 npm run start
+```
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Client Setup
+```
 cd client
 npm install
 npm run dev
-
+```
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### backend/.env (Example)
 
@@ -49,19 +52,24 @@ PORT=8080
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### postgresSql
 Run in new terminal or PowerShell or CMD:
-psql -U postgres
-```
+
+```psql -U postgres```
+
 enter Password
 ```
 \c realtime_orders
 ```
 run these command to make changes in database
+
+-- Insert
 ```
-```-- Insert```
 INSERT INTO orders (customer_name, product_name, status) VALUES ('Alice', 'Keyboard', 'pending');
-
-```-- Update```
+```
+-- Update
+```
 UPDATE orders SET status = 'shipped', updated_at = NOW() WHERE id = 1;
-
-```-- Delete```
+```
+-- Delete
+```
 DELETE FROM orders WHERE id = 1;
+```
